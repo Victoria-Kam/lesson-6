@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.homeWork.Computer;
 import com.company.homeWork.CreditCard;
 
 import java.util.Scanner;
@@ -8,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String marker = "********************************************************************************";
+        /*String marker = "********************************************************************************";
         String accountNumber;
         double amountOnAccount;
         double deposit;
@@ -62,6 +63,69 @@ public class Main {
         System.out.println("Клиент " + customerOne.getIdCustomer() + ". Номер счета: " + customerOne.getAccountNumber() + ". Сумма на счете: " + customerOne.getAmountOnAccount() + " руб.");
         System.out.println("Клиент " + customerTwo.getIdCustomer() + ". Номер счета: " + customerTwo.getAccountNumber() + ". Сумма на счете: " + customerTwo.getAmountOnAccount() + " руб.");
         System.out.println("Клиент " + customerThree.getIdCustomer() + ". Номер счета: " + customerThree.getAccountNumber() + ". Сумма на счете: " + customerThree.getAmountOnAccount() + " руб.\n"+marker);
+*/
+
+        String marker = "********************************************************************************";
+
+        double cost;
+        int hddMemorySize;
+        int ramMemorySize;
+        String model;
+        String ramName;
+        String hddName;
+        String hddType;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Создаем первый компьютер, с первым конструктором.");
+        System.out.print("Введите стоимость первого компьютера: ");
+        cost = scanner.nextDouble();
+        System.out.print("Введите модель первого компьютера: ");
+        model = scanner.next();
+        Computer computerOne = new Computer(cost, model);
+
+        System.out.print("\n" + marker + "\n");
+
+        System.out.println("Информация о первом компьютере:");
+        System.out.println("1) Стоимость: " + computerOne.getCost());
+        System.out.println("2) Модель: " + computerOne.getModel());
+        System.out.println("3) Название HDD: " + computerOne.getHdd().getName());
+        System.out.println("4) Размер HDD: " + computerOne.getHdd().getMemorySize());
+        System.out.println("5) Тип HDD: " + computerOne.getHdd().getType());
+        System.out.println("6) Название RAM: " + computerOne.getRam().getName());
+        System.out.println("7) Размер RAM: " + computerOne.getRam().getMemorySize());
+
+        System.out.println("\n" + marker);
+        System.out.println(marker + "\n");
+
+        System.out.println("Создаем второй компьютер, со вторым конструктором.");
+        System.out.print("Введите стоимость второго компьютера: ");
+        cost = scanner.nextDouble();
+        System.out.print("Введите модель второго компьютера: ");
+        model = scanner.next();
+        System.out.print("Введите название HDD второго компьютера: ");
+        hddName = scanner.next();
+        System.out.print("Введите размер HDD второго компьютера(Гб): ");
+        hddMemorySize = scanner.nextInt();
+        System.out.print("Введите тип HDD второго компьютера(внешний или внутренний): ");
+        hddType = scanner.next();
+        System.out.print("Введите название RAM второго компьютера: ");
+        ramName = scanner.next();
+        System.out.print("Введите размер RAM второго компьютера(Гб): ");
+        ramMemorySize = scanner.nextInt();
+
+        Computer computerTwo = new Computer(cost, model, ramName, ramMemorySize, hddName, hddMemorySize, hddType);
+
+        System.out.print("\n" + marker + "\n");
+
+        System.out.println("Информация о втором компьютере:");
+        System.out.println("1) Стоимость: " + computerTwo.getCost());
+        System.out.println("2) Модель: " + computerTwo.getModel());
+        System.out.println("3) Название HDD: " + computerTwo.getHdd().getName());
+        System.out.println("4) Размер HDD: " + computerTwo.getHdd().getMemorySize() + " Гб");
+        System.out.println("5) Тип HDD: " + computerTwo.getHdd().getType());
+        System.out.println("6) Название RAM: " + computerTwo.getRam().getName());
+        System.out.println("7) Размер RAM: " + computerTwo.getRam().getMemorySize() + " Гб");
 
     }
 }
