@@ -38,7 +38,7 @@ public class Computer {
         private int memorySize = 0;
         private String type = "тип памяти не определен";
 
-        public HDD() {
+        private HDD() {
         }
 
         public HDD(String name, int memorySize, String type) {
@@ -60,7 +60,7 @@ public class Computer {
         }
     }
 
-    public class RAM {
+    private class RAM {
 
         private String name = "имя не определено";
         private int memorySize = 0;
@@ -105,11 +105,23 @@ public class Computer {
         return this.model;
     }
 
-    public RAM getRam() {
-        return this.ram;
+    public String ramGetName() {
+        return this.ram.getName();
     }
 
-    public HDD getHdd() {
-        return this.hdd;
+    public int ramGetMemorySize() {
+        return this.ram.getMemorySize();
+    }
+
+    public String hddGetName() {
+        return this.hdd.getName();
+    }
+
+    public int hddGetMemorySize() {
+        return this.hdd.getMemorySize();
+    }
+
+    public String hddGetType() {
+        return this.hdd.getType();
     }
 }

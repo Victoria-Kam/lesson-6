@@ -89,11 +89,11 @@ public class Main {
         System.out.println("Информация о первом компьютере:");
         System.out.println("1) Стоимость: " + computerOne.getCost());
         System.out.println("2) Модель: " + computerOne.getModel());
-        System.out.println("3) Название HDD: " + computerOne.getHdd().getName());
-        System.out.println("4) Размер HDD: " + computerOne.getHdd().getMemorySize());
-        System.out.println("5) Тип HDD: " + computerOne.getHdd().getType());
-        System.out.println("6) Название RAM: " + computerOne.getRam().getName());
-        System.out.println("7) Размер RAM: " + computerOne.getRam().getMemorySize());
+        System.out.println("3) Название HDD: " + computerOne.hddGetName());
+        System.out.println("4) Размер HDD: " + computerOne.hddGetMemorySize());
+        System.out.println("5) Тип HDD: " + computerOne.hddGetType());
+        System.out.println("6) Название RAM: " + computerOne.ramGetName());
+        System.out.println("7) Размер RAM: " + computerOne.ramGetMemorySize());
 
         System.out.println("\n" + marker);
         System.out.println(marker + "\n");
@@ -121,11 +121,11 @@ public class Main {
         System.out.println("Информация о втором компьютере:");
         System.out.println("1) Стоимость: " + computerTwo.getCost());
         System.out.println("2) Модель: " + computerTwo.getModel());
-        System.out.println("3) Название HDD: " + computerTwo.getHdd().getName());
-        System.out.println("4) Размер HDD: " + computerTwo.getHdd().getMemorySize() + " Гб");
-        System.out.println("5) Тип HDD: " + computerTwo.getHdd().getType());
-        System.out.println("6) Название RAM: " + computerTwo.getRam().getName());
-        System.out.println("7) Размер RAM: " + computerTwo.getRam().getMemorySize() + " Гб");
+        System.out.println("3) Название HDD: " + computerTwo.hddGetName());
+        System.out.println("4) Размер HDD: " + computerTwo.hddGetMemorySize() + " Гб");
+        System.out.println("5) Тип HDD: " + computerTwo.hddGetType());
+        System.out.println("6) Название RAM: " + computerTwo.ramGetName());
+        System.out.println("7) Размер RAM: " + computerTwo.ramGetMemorySize() + " Гб");
 
     }
 }
